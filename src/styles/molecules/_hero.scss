@@ -1,0 +1,12 @@
+.m-hero {
+  max-width: 1024px;
+  margin: auto;
+  &__title {
+    @include font(primary, regular);
+    font-size: 40px;
+  }
+  &__subtitle {
+    @include font(primary, semi-bold);
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,15 @@
+.a-button {
+  @include font(primary, regular);
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  transition: background 300ms ease;
+
+  &:hover {
+    border: solid 1px black;
+    background-color: white;
+    color: black;
+  }
+}
