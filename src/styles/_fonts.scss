@@ -1,0 +1,75 @@
+// Github  https://gist.github.com/fabricelejeune/bcdd3d4725d4e4cea672
+$base-font-stack: (
+  primary: (
+    light: (
+      family: (
+        "Open Sans",
+        sans-serif,
+      ),
+      weight: 300,
+      style: normal,
+    ),
+    regular: (
+      family: (
+        "Open Sans",
+        sans-serif,
+      ),
+      weight: 300,
+      style: normal,
+    ),
+    semi-bold: (
+      family: (
+        "Open Sans",
+        sans-serif,
+      ),
+      weight: 600,
+      style: normal,
+    ),
+    bold: (
+      family: (
+        "Open Sans",
+        sans-serif,
+      ),
+      weight: 700,
+      style: normal,
+    ),
+  ),
+);
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    @if type-of($map) != "map" {
+      @warn '`#{$map}` is not a map.';
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+@function contains($list, $values...) {
+  @each $value in $values {
+    @if type-of(index($list, $value)) != "number" {
+      @return false;
+    }
+  }
+  @return true;
+}
+
+@mixin font(
+  $group,
+  $variant: regular,
+  $properties: family weight style,
+  $font-stack: $base-font-stack
+) {
+  $font-properties: map-deep-get($font-stack, $group, $variant);
+
+  @if $font-properties {
+    @each $property, $values in $font-properties {
+      @if contains($properties, $property) {
+        font-#{$property}: map-get($font-properties, $property);
+      }
+    }
+  }
+}

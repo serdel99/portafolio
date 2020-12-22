@@ -1,0 +1,13 @@
+.o-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1024px;
+  margin: auto;
+
+  &__title {
+    @include font(primary, bold);
+    font-size: 24px;
+  }
+}
