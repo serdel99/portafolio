@@ -1,6 +1,4 @@
 .m-hero {
-  max-width: 1024px;
-  margin: auto;
   &__title {
     @include font(primary, regular);
     font-size: 40px;
