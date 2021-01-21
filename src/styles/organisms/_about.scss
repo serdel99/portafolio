@@ -1,0 +1,82 @@
+.o-about {
+  &__title {
+    @include font(primary, semi-bold);
+    font-size: 30px;
+  }
+  &__description {
+    @include font(primary, regular);
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 50%;
+  }
+
+  .o-about-img {
+    position: relative;
+    &__overlay {
+      position: absolute;
+      bottom: 20%;
+      right: -20px;
+      padding: 20px 30px;
+      background-color: #ff2e63;
+    }
+
+    .overlay__title {
+      @include font(primary, semi-bold);
+      font-size: 18px;
+      margin: 0 0 5px 0;
+      color: white;
+    }
+    .overlay__anchor {
+      @include font(primary, semi-bold);
+      display: block;
+      margin: 0;
+      color: white;
+    }
+  }
+
+  .o-about-wrapper {
+    display: flex;
+
+    .o-about-bio {
+      margin-left: 50px;
+      &__title {
+        @include font(primary, semi-bold);
+        font-size: 26px;
+      }
+      &__description {
+        @include font(primary, regular);
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .o-about-works {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .o-about-work:nth-child(2n + 1) {
+        margin-right: 40px;
+      }
+
+      .o-about-work {
+        margin-bottom: 40px;
+        &__position {
+          @include font(primary, semi-bold);
+          font-size: 16px;
+          margin: 0;
+        }
+        &__agency {
+          @include font(primary, regular);
+          font-size: 16px;
+          margin: 0;
+        }
+        &__date {
+          @include font(primary, regular);
+          font-size: 13px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

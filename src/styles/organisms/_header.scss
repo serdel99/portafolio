@@ -1,11 +1,4 @@
 .o-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-
-
-
   &__title {
     @include font(primary, bold);
     font-size: 24px;
