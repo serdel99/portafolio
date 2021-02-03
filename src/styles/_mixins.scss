@@ -1,0 +1,12 @@
+@mixin reveal($delay) {
+  position: relative;
+  height: fit-content;
+  &::before {
+    content: " ";
+    background-color: #d8d8d8;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    animation: reveal-block 1.3s;
+  }
+}

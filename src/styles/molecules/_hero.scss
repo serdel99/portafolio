@@ -1,13 +1,18 @@
 .m-hero {
   &__title {
     @include font(primary, regular);
+    @include reveal(0);
+    width: fit-content;
+    padding: 4px;
     font-size: 40px;
   }
   &__subtitle {
     @include font(primary, semi-bold);
+    @include reveal(0);
     font-size: 18px;
   }
   .a-button {
+    @include reveal(0);
     margin-top: 20px;
   }
 }
