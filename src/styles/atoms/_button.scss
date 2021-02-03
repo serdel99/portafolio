@@ -1,7 +1,6 @@
 .a-button {
   @include font(primary, regular);
-  outline: none;
-  border: none;
+  border: black 1px solid;
   background-color: black;
   color: white;
   padding: 14px 20px;
