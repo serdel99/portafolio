@@ -1,26 +1,32 @@
 .o-proyects {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin-top: 100px;
-  row-gap: 20px;
 
-  .o-proyects__item {
+  .o-proyects__title {
+    @include font(primary, semi-bold);
+    font-size: 30px;
+  }
+  .o-proyects-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .o-proyect {
     @include reveal(0);
     cursor: pointer;
     position: relative;
     flex-basis: 33%;
     height: 400px;
     &:hover {
-      .o-proyects__img {
+      .o-proyect__img {
         filter: blur(3px) grayscale(0.5);
       }
-      .o-proyects-body {
+      .o-proyect-body {
         opacity: 1;
       }
     }
   }
-  .o-proyects-body {
+  .o-proyect-body {
     position: absolute;
     left: 0.5rem;
     bottom: 1rem;
@@ -28,18 +34,18 @@
     transition: all 0.2s ease-in-out;
   }
 
-  .o-proyects__img {
+  .o-proyect__img {
     object-fit: cover;
     transition: all 0.2s ease-in-out;
   }
 
-  .o-proyects__title {
+  .o-proyect__title {
     @include font(primary, regular);
     font-size: 1.2rem;
     color: white;
     margin: 0;
   }
-  .o-proyects__description {
+  .o-proyect__description {
     @include font(primary, bold);
 
     font-size: 0.7rem;

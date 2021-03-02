@@ -34,17 +34,20 @@ const proyects = [
 const SectionProyects = () => {
   return (
     <section className="o-proyects">
-      {proyects.map(({ img, title, description }) => {
-        return (
-          <article className="o-proyects__item">
-            <img src={img} className="o-proyects__img" />
-            <div className="o-proyects-body">
-              <h1 className="o-proyects__title"> {title} </h1>
-              <p className="o-proyects__description">{description}</p>
-            </div>
-          </article>
-        );
-      })}
+      <h1 className="o-proyects__title">Proyects</h1>
+      <div className="o-proyects-wrapper">
+        {proyects.map(({ img, title, description }) => {
+          return (
+            <article className="o-proyect">
+              <img src={img} className="o-proyect__img" />
+              <div className="o-proyect-body">
+                <h1 className="o-proyect__title"> {title} </h1>
+                <p className="o-proyect__description">{description}</p>
+              </div>
+            </article>
+          );
+        })}
+      </div>
     </section>
   );
 };

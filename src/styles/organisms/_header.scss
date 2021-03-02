@@ -1,4 +1,11 @@
 .o-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .hamburger {
+    font-size: 12px;
+  }
   &__title {
     @include font(primary, bold);
     font-size: 24px;
